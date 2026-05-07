@@ -70,8 +70,10 @@ def delete_entry(entry_id):
     db.session.commit()
     return '', 204
 
+# Create tables on startup
+with app.app_context():
+    db.create_all()
+
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     port = int(os.getenv('PORT', 5001))
     app.run(host='0.0.0.0', port=port)
