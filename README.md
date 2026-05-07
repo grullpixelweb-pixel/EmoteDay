@@ -14,6 +14,12 @@ EmoteDay es una aplicación móvil diseñada para ayudarte a rastrear tu bienest
 
 ## Cómo empezar
 
+Visit: 
+
+https://emote-day.vercel.app/
+
+Backend: Railway com 30 dias disponible (7 mayo 2026 - 7 Junio 2026)
+
 ### Backend
 1. Navega a `backend/`.
 2. Crea un entorno virtual: `python3 -m venv venv`.
