@@ -1,0 +1,115 @@
+:root {
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Color Palette - Elegant & Emotional */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --accent-primary: #8b5cf6; /* Electric Violet */
+  --accent-secondary: #f43f5e; /* Vibrant Rose */
+  --accent-tertiary: #06b6d4; /* Bright Cyan */
+  
+  /* Emotion Colors - More Saturated */
+  --color-happy: #f59e0b;
+  --color-sad: #3b82f6;
+  --color-angry: #ef4444;
+  --color-neutral: #64748b;
+  --color-excited: #10b981;
+
+
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-purple: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(263, 70%, 15%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225, 60%, 20%, 1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339, 70%, 20%, 1) 0, transparent 50%);
+}
+
+
+[data-theme='light'] body {
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,100%,95%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,100%,92%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,100%,93%,1) 0, transparent 50%);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+
+button:active {
+  transform: scale(0.95);
+}

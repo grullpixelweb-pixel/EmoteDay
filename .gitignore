@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+frontend-web/node_modules/
+frontend-web/dist/
+
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+.env
+
+# Databases
+backend/*.db
+backend/instance/
+
+# OS files
+.DS_Store
+Thumbs.db
